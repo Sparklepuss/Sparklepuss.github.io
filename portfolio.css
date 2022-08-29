@@ -35,7 +35,7 @@ div {
   position: relative
 }
 
-body>div {
+body > div {
   height: 100%;
   display: inline-block;
   vertical-align: top;
@@ -87,6 +87,105 @@ body>div {
   src: url("/type/Necto-Mono.woff2");
 }
 
+
+
+
+
+.gameover {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: right;
+  margin: auto;
+  visibility: hidden;
+}
+
+.gameover a {
+  font-style: normal;
+  position: relative;
+  font-family: "Necto-Mono";
+  font-size: 5vh;
+  line-height: 6vh;
+  color: black;
+  visibility: hidden;
+}
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+  .gameover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: right;
+    -webkit-z-index: 100!important;
+    -moz-z-index: 100!important;
+    -ms-z-index: 100!important;
+    -o-z-index: 100!important;
+    z-index: 100!important;
+    padding: 14vh;
+    background-color: pink;
+    visibility: visible;
+  }
+
+  .gameover a {
+    font-style: normal;
+    position: relative;
+    font-family: "Necto-Mono";
+    font-size: 5vh;
+    line-height: 6vh;
+    color: black;
+    visibility: visible;
+  }
+
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .gameover {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: right;
+    -webkit-z-index: 100!important;
+    -moz-z-index: 100!important;
+    -ms-z-index: 100!important;
+    -o-z-index: 100!important;
+    z-index: 100!important;
+    padding: 14vh;
+    background-color: pink;
+    visibility: visible;
+  }
+
+  .gameover a {
+    font-style: normal;
+    position: relative;
+    font-family: "Necto-Mono";
+    font-size: 5vh;
+    line-height: 6vh;
+    color: black;
+    visibility: visible;
+  }
+
+}
+
+
+
+
+
 .line {
   float: left;
   width: 100%;
@@ -107,7 +206,6 @@ body>div {
   z-index: 1;
   top: 0;
   left: 0;
-  display: inline-block;
 }
 
 .menubar .menubar-item {
@@ -372,33 +470,31 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav1 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav1 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -407,7 +503,6 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
 }
 
 .sidenav1 a {
@@ -418,7 +513,7 @@ body>div {
 
 .sidenav1 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -437,8 +532,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -462,33 +557,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav2 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav2 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -497,7 +592,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav2 a {
@@ -508,7 +603,7 @@ body>div {
 
 .sidenav2 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -527,8 +622,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -552,33 +647,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav3 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav3 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -587,7 +682,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav3 a {
@@ -598,7 +693,7 @@ body>div {
 
 .sidenav3 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -617,8 +712,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -642,33 +737,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav4 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav4 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -677,7 +772,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav4 a {
@@ -688,7 +783,7 @@ body>div {
 
 .sidenav4 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -707,8 +802,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -732,33 +827,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav5 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav5 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -767,7 +862,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav5 a {
@@ -778,7 +873,7 @@ body>div {
 
 .sidenav5 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -797,8 +892,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -822,33 +917,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav6 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav6 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -857,7 +952,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav6 a {
@@ -868,7 +963,7 @@ body>div {
 
 .sidenav6 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -887,8 +982,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -912,33 +1007,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav7 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav7 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -947,7 +1042,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav7 a {
@@ -958,7 +1053,7 @@ body>div {
 
 .sidenav7 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -977,8 +1072,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1002,33 +1097,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav8 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav8 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1037,7 +1132,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav8 a {
@@ -1048,7 +1143,7 @@ body>div {
 
 .sidenav8 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1067,8 +1162,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1092,33 +1187,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav9 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav9 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1127,7 +1222,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav9 a {
@@ -1138,7 +1233,7 @@ body>div {
 
 .sidenav9 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1157,8 +1252,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1182,33 +1277,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav10 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav10 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1217,7 +1312,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav10 a {
@@ -1228,7 +1323,7 @@ body>div {
 
 .sidenav10 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1247,8 +1342,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1272,33 +1367,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav11 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav11 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1307,7 +1402,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav11 a {
@@ -1318,7 +1413,7 @@ body>div {
 
 .sidenav11 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1337,8 +1432,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1362,33 +1457,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav12 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav12 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1397,7 +1492,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav12 a {
@@ -1408,7 +1503,7 @@ body>div {
 
 .sidenav12 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1427,8 +1522,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1452,33 +1547,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav13 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav13 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1487,7 +1582,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav13 a {
@@ -1498,7 +1593,7 @@ body>div {
 
 .sidenav13 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1517,8 +1612,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1542,33 +1637,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav14 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav14 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1577,7 +1672,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav14 a {
@@ -1588,7 +1683,7 @@ body>div {
 
 .sidenav14 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1607,8 +1702,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1632,33 +1727,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav15 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav15 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1667,7 +1762,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav15 a {
@@ -1678,7 +1773,7 @@ body>div {
 
 .sidenav15 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1697,8 +1792,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1722,33 +1817,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav16 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav16 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1757,7 +1852,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav16 a {
@@ -1768,7 +1863,7 @@ body>div {
 
 .sidenav16 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1787,8 +1882,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1812,33 +1907,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav17 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav17 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1847,7 +1942,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav17 a {
@@ -1858,7 +1953,7 @@ body>div {
 
 .sidenav17 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1877,8 +1972,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1902,33 +1997,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav18 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav18 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -1937,7 +2032,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav18 a {
@@ -1948,7 +2043,7 @@ body>div {
 
 .sidenav18 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -1967,8 +2062,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -1992,33 +2087,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav19 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav19 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2027,7 +2122,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav19 a {
@@ -2038,7 +2133,7 @@ body>div {
 
 .sidenav19 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2057,8 +2152,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2082,33 +2177,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav20 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav20 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2117,7 +2212,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav20 a {
@@ -2128,7 +2223,7 @@ body>div {
 
 .sidenav20 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2147,8 +2242,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2172,33 +2267,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav21 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav21 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2207,7 +2302,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav21 a {
@@ -2218,7 +2313,7 @@ body>div {
 
 .sidenav21 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2237,8 +2332,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2262,33 +2357,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav22 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav22 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2297,7 +2392,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav22 a {
@@ -2308,7 +2403,7 @@ body>div {
 
 .sidenav22 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2327,8 +2422,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2352,33 +2447,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav23 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav23 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2387,7 +2482,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav23 a {
@@ -2398,7 +2493,7 @@ body>div {
 
 .sidenav23 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2417,8 +2512,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2442,33 +2537,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav24 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav24 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2477,7 +2572,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav24 a {
@@ -2488,7 +2583,7 @@ body>div {
 
 .sidenav24 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2507,8 +2602,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2532,33 +2627,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav25 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav25 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2567,7 +2662,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav25 a {
@@ -2578,7 +2673,7 @@ body>div {
 
 .sidenav25 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2597,8 +2692,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2622,33 +2717,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav26 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav26 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2657,7 +2752,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav26 a {
@@ -2668,7 +2763,7 @@ body>div {
 
 .sidenav26 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2687,8 +2782,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2712,33 +2807,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav27 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav27 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2747,7 +2842,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav27 a {
@@ -2758,7 +2853,7 @@ body>div {
 
 .sidenav27 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2777,8 +2872,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2802,33 +2897,33 @@ body>div {
   height: 0;
   position: fixed;
   z-index: 1;
-  right: 0;
+  right: 1%;
   bottom: -15vh;
   background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   border-radius: 100vw;
   border: 1px solid black;
-  padding-left: 8%;
-  padding-right: 8%;
+
+
   box-shadow: 0 0 5vh 5vh pink;
-  margin: 1%;
+  margin: auto;
 }
 
 .sidenav28 .title {
   font-family: 'Montserrat-SemiBold';
   font-weight: normal;
   font-style: normal;
-  font-size: 4vw;
+  font-size: calc(8px + 3.7vw);
   text-align: right;
-  line-height: 110%;
+  line-height: 105%;
   padding-bottom: 2%;
 }
 
 .sidenav28 .info {
   font-family: 'Montserrat-LightItalic';
   font-weight: normal;
-  font-size: 15px;
+  font-size: 1.5vh;
   margin-bottom: 1vh;
   text-align: right;
 }
@@ -2837,7 +2932,7 @@ body>div {
   text-decoration: none;
   color: black;
   display: block;
-  text-align: center;
+
 }
 
 .sidenav28 a {
@@ -2848,7 +2943,7 @@ body>div {
 
 .sidenav28 img {
   position: inherit;
-  width: 35vw;
+  width: 43vw;
   height: auto;
   border: 1px solid black;
   border-radius: 2vw;
@@ -2867,8 +2962,8 @@ body>div {
   font-weight: normal;
   font-style: normal;
   color: black;
-  font-size: 4vw;
-  padding-left: 30vw;
+  font-size: calc(8px + 3.7vw);
+  right: 0;
   text-align: right;
 }
 
@@ -2903,7 +2998,7 @@ body>div {
   font-weight: normal;
   font-style: italic;
   color: black;
-  font-size: calc(10.5px + 0.5vw);
+  font-size: calc(7px + 0.7vw);
 }
 
 .pill {
@@ -2955,11 +3050,44 @@ body>div {
 }
 
 @media screen and (max-width: 800px) {
+
   .grid-container {
     column-count: 2;
   }
 
-  #slider-outer {
-    width: 100%;
+  .menubar {
+    visibility: hidden;
   }
+
+  html, body {
+    margin-right: 0px;
+  }
+
+  .header {
+    column-count: 1;
+    margin: 0%;
+    border: 0px solid black;
+  }
+
+  .header .me{
+    font-size: 13px;
+  }
+
+  .popup {
+    font-size: 11px;
+  }
+
+  .grid-wrapper {
+    padding-left: 0%;
+  }
+
+  .grid-item .summary .title {
+    font-size: 18px;
+  }
+
+  .popup .popuptext {
+    width: 90%;
+
+  }
+
 }
